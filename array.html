@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+    <script type="text/javascript">
+        let fruits = ["apple","orange","mango"];
+
+        const animateAll = (animate) =>{
+            setTimeout(() =>{
+                animate(fruits[0]);
+
+                setTimeout(() =>{
+                animate(fruits[1]);
+
+                setTimeout(() =>{
+                animate(fruits[2]);
+            },2000);
+
+            },2000);
+            
+            },2000);
+        
+    
+
+        }
+
+        const animate = (fruits) => {
+            console.log("animating", fruits);
+        }
+
+        animateAll(animate)
+
+    </script>
+</body>
+</html>
